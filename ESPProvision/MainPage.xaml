@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ESPProvision.MainPage"
+               xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true">
+
+    <StackLayout>
+        <Button x:Name="tstButton" IsVisible="false" Clicked="tstButton_Clicked"/>
+         <Button x:Name="btnScan" IsVisible="false" Text="Scan" Clicked="btnScan_Clicked"/>
+        <ListView x:Name="lstTest">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding WifiName}"/>
+                            <Label Text="{Binding Rssi}"/>
+                            <Label Text="{Binding Security}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="btnProvision" IsVisible="false" Text="Provision" Clicked="btnProvision_Clicked"/>
+    </StackLayout>
+
+</ContentPage>

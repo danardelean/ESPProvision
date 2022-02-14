@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.1" />
+    <PackageReference Include="Google.Protobuf" Version="3.19.4" />
+    <PackageReference Include="Shiny.BluetoothLE" Version="2.4.3.3003" />
+    <PackageReference Include="Shiny" Version="2.4.3.3003" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="proto\" />
+    <None Remove="Google.Protobuf" />
+    <None Remove="Shiny.BluetoothLE" />
+    <None Remove="Shiny" />
+    <None Remove="ESPProvision\" />
+    <None Remove="ESPProvision\Interfaces\" />
+    <None Remove="ESPProvision\Listeners\" />
+    <None Remove="ESPProvision\protobuf\" />
+    <None Remove="ESPProvision\Security\" />
+    <None Remove="ESPProvision\Utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ESPProvision\" />
+    <Folder Include="ESPProvision\Interfaces\" />
+    <Folder Include="ESPProvision\Listeners\" />
+    <Folder Include="ESPProvision\protobuf\" />
+    <Folder Include="ESPProvision\Security\" />
+    <Folder Include="ESPProvision\Utils\" />
+  </ItemGroup>
+</Project>
